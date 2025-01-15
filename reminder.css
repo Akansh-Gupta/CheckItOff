@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "M PLUS Rounded 1c", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #a6a5a5;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+.bodybg {
+    background-color: rgba(68, 68, 68, 255) !important;
+    color: white !important;
+}
+
+.main-content {
+    position: relative;
+    min-height: 100vh;
+    color: white;
+    background-color: rgb(30, 30, 30);
+    top: 0;
+    left: 80px;
+    transition: all 0.6s ease-in-out;
+    width: calc(100% - 80px);
+    padding: 1rem;
+}
+
+.clock{
+    border: 1px solid white;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: rgba(68, 68, 68, 255);
+}
+#date{
+    font-size: 20px !important;
+    text-align: center;
+}
+
+.clock ul{
+    list-style: none;
+    display: flex;
+    font-size: 55px;
+    gap: 12px;
+    padding: 1rem 1rem 0 1rem;
+    margin: 0;
+    justify-content: center;
+    overflow: hidden;
+}
+.clock ul li{
+    flex-wrap: wrap;
+    flex-shrink: 1;
+}
+
+.sub-container{
+	background-color: rgba(68, 68, 68, 255);
+    border: 1px solid white;
+	padding: 30px;
+	border-radius: 5px;
+}
+.close{
+	margin-top: -20px;
+	margin-left: -20px;
+	background-color: rgb(30, 30, 30);
+	border-radius: 5px;
+	width: 27px;
+	height: 27px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    cursor: pointer;
+}
+
+.details{
+	flex: 2;
+	text-align: center;
+}
+.title{
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+}
+.open{
+	width: 100%;
+	border: none;
+	height: 40px;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+    justify-content: center;
+}
+
+
+ul{
+    padding: 0 !important;
+}
+
+ul .checker{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 45px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 15px;
+    margin-top: 15px;
+    background: rgba(68, 68, 68, 255);
+    color: white;
+}
+
+ul .checker::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+    background: white;
+}
+
+ul .checker .imgSize{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+}
+
+ul .checked{
+    text-decoration: line-through !important;
+    color: black;
+}
+ul .checked::before{
+    background-image: url("images/check-circle.png");
+    background-size: cover;
+}
