@@ -8,7 +8,7 @@ function clock() {
     let h = today.getHours()
     let m = today.getMinutes()
     let s = today.getSeconds()
-    let day = h < 11 ? 'AM' : 'PM'
+    let meridiem = h < 11 ? 'AM' : 'PM'
 
     h = h < 10 ? '0' + h : h
     h = h > 12 ? h - 12 : h
@@ -18,6 +18,7 @@ function clock() {
     document.getElementById('hours').innerHTML = h
     document.getElementById('min').innerHTML = m
     document.getElementById('sec').innerHTML = s
+    document.getElementById('meridiem').innerHTML = meridiem
 } let inter = setInterval(clock, 1000)
 
 
@@ -53,35 +54,31 @@ let setReminder = () => {
 
     let card = document.createElement("div")
     card.classList.add('checker', 'card')
-    card.appendChild(titleTime)
-    card.appendChild(titleDate)
-    card.appendChild(line)
-    card.appendChild(para)
-    card.appendChild(span)
+    card.append(titleTime, titleDate, line, para, span)
 
     listContainer.appendChild(card)
 }
 
 // function setReminder() {
 
-    // let title = document.createElement('h3')
-    // title.innerHTML = (data.value + " " + time.value);
+// let title = document.createElement('h3')
+// title.innerHTML = (data.value + " " + time.value);
 
-    // let line = document.createElement('hr')
+// let line = document.createElement('hr')
 
-    // let para = document.createElement('p')
-    // para.innerHTML = desc.value
+// let para = document.createElement('p')
+// para.innerHTML = desc.value
 
-    // let span = document.createElement("img")
-    // span.classList.add('imgSize')
-    // span.setAttribute('src', 'images/trash.png')
+// let span = document.createElement("img")
+// span.classList.add('imgSize')
+// span.setAttribute('src', 'images/trash.png')
 
-    // let card = document.createElement("div")
-    // card.classList.add('checker', 'card')
-    // card.appendChild(title)
-    // card.appendChild(line)
-    // card.appendChild(para)
-    // card.appendChild(span)
+// let card = document.createElement("div")
+// card.classList.add('checker', 'card')
+// card.appendChild(title)
+// card.appendChild(line)
+// card.appendChild(para)
+// card.appendChild(span)
 
-    // listContainer.appendChild(card)
+// listContainer.appendChild(card)
 // }

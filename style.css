@@ -26,6 +26,30 @@
     background: #ffffff;
 }
 
+.main-content {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+    color: white;
+    background-color: rgb(30, 30, 30);
+    top: 0;
+    left: 80px;
+    transition: all 0.6s ease-in-out;
+    width: calc(100% - 80px);
+    padding: 1rem;
+}
+
+.bodybg {
+    background-color: rgba(68, 68, 68, 255) !important;
+    color: white !important;
+}
+
+.alert{
+    visibility: hidden;
+    padding: 5px !important;
+    text-align: center;
+}
+
 .sidebar {
     position: fixed;
     top: 0;

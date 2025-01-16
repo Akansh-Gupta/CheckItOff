@@ -5,20 +5,12 @@ let miniNoteDisplay = document.getElementById('miniNoteDisplay')
 let miniNoteTitle = document.getElementById('cardTitle')
 let miniNoteText = document.getElementById('cardText')
 
-let cardTitle
-let cardText
-let cardBody
-let noteFooter
-let cardDel
-
 inputTitle.addEventListener('keydown', (e) => {
     if (e.key == "Enter") {
         e.preventDefault();
         inputNote.focus()
     }
 })
-
-
 
 // Mini Note Creation
 
@@ -33,37 +25,34 @@ function submitBtn() {
     }
     else {
 
-        cardTitle = document.createElement("h3")
+        let cardTitle = document.createElement("h3")
+        cardTitle.setAttribute("contenteditable", "true")
         cardTitle.classList.add('card-title')
         cardTitle.innerHTML = inputTitle.value
 
         let line = document.createElement("hr")
 
-        cardText = document.createElement("pre")
+        let cardText = document.createElement("p")
+        cardText.setAttribute("contenteditable", "true")
         cardText.classList.add('card-text')
         cardText.innerHTML = inputNote.value
 
-
-        cardBody = document.createElement("div")
+        let cardBody = document.createElement("div")
         cardBody.classList.add('card-body')
-        cardBody.appendChild(cardTitle)
-        cardBody.appendChild(line)
-        cardBody.appendChild(cardText)
+        cardBody.append(cardTitle, line, cardText)
 
-        cardDel = document.createElement('img')
-        cardDel.setAttribute('id', 'cardDel')
+        let cardDel = document.createElement('img')
         cardDel.classList.add('footer', 'btn')
         cardDel.setAttribute('src', 'images/trash.png')
 
-        noteFooter = document.createElement('div')
+        let noteFooter = document.createElement('div')
         noteFooter.classList.add('noteFooter')
         noteFooter.appendChild(cardDel)
 
         let card = document.createElement('div')
         card.classList.add('card', 'bodybg', 'miniNote')
         card.setAttribute('onclick', '')
-        card.appendChild(cardBody)
-        card.appendChild(noteFooter)
+        card.append(cardBody, noteFooter)
 
         miniNoteDisplay.appendChild(card)
     }
@@ -89,6 +78,22 @@ miniNoteDisplay.addEventListener('click', function (e) {
             e.target.parentElement.parentElement.remove();
             saveNote()
         }
+    }
+    else if(e.target.tagName === "H3"){
+        title = document.querySelectorAll(".card-title");
+        title.forEach(nt => {
+            nt.onkeyup = function(){
+                saveNote()
+            }
+        })
+    }
+    else if(e.target.tagName === "P"){
+        text = document.querySelectorAll(".card-text");
+        text.forEach(nt => {
+            nt.onkeyup = function(){
+                saveNote()
+            }
+        })
     }
 })
 

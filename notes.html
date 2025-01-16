@@ -21,17 +21,13 @@
     <div class="sidebar" id="sidebar"></div>
     <div class="main-content" id="mainContent">
         <div class="container">
-            <div class="alert alert-danger mt-3" role="alert" id="balert" style="visibility: hidden;">
-                Cannot Save Empty Task
+            <div class="alert alert-danger" role="alert" id="balert" style="visibility: hidden;">
+                Cannot Save Empty Note
             </div>
-
-            <input class="form-control mt-3 bodybg" id="titleBox" placeholder="No Title" autocomplete="off"></input>
-
-            <textarea class="form-control mt-3 bodybg" id="textBox" placeholder="Enter your text here"
+            <input type="text" class="form-control mt-3 bodybg" id="titleBox" placeholder="No Title..." autocomplete="off">
+            <textarea class="form-control mt-3 bodybg" id="textBox" placeholder="Enter your text here..."
                 rows="8"></textarea>
-
             <button onclick="submitBtn()" class="btn bg-success mt-3 text-white">Save</button>
-
             <div class="miniNoteDisplay" id="miniNoteDisplay"></div>
         </div>
 </body>
