@@ -18,13 +18,22 @@
 </head>
 
 <body>
+    <!-- <div id="popupbg" class="popupbg">
+        <div id="popup" class="popup bodybg">
+            <h1>This Note Will Be Deleted Permanently!</h1>
+            <h4>Are You Sure You Want to Continue?</h4>
+            <button id="deleteNote" class="btn btn-danger mt-3 p-3" onclick="deleteNote()">Yes</button>
+            <button id="hidePopup" class="btn btn-success mx-3 mt-3 p-3" onclick="hidePopup()">Cancel</button>
+        </div>
+    </div> -->
     <div class="sidebar" id="sidebar"></div>
     <div class="main-content" id="mainContent">
         <div class="container">
             <div class="alert alert-danger" role="alert" id="balert" style="visibility: hidden;">
                 Cannot Save Empty Note
             </div>
-            <input type="text" class="form-control mt-3 bodybg" id="titleBox" placeholder="No Title..." autocomplete="off">
+            <input type="text" class="form-control mt-3 bodybg" id="titleBox" placeholder="No Title..."
+                autocomplete="off">
             <textarea class="form-control mt-3 bodybg" id="textBox" placeholder="Enter your text here..."
                 rows="8"></textarea>
             <button onclick="submitBtn()" class="btn bg-success mt-3 text-white">Save</button>
