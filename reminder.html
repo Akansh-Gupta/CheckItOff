@@ -21,6 +21,9 @@
     <div class="sidebar" id="sidebar"></div>
     <div class="main-content">
         <div class="container">
+            <div class="alert alert-danger" role="alert" id="balert" style="visibility: hidden;">
+                Please Fill All The Fields
+            </div>
             <!-- Clock -->
             <div class="card">
                 <div class="clock">
@@ -42,13 +45,10 @@
 
             <div class="collapse" id="myPopup">
                 <div class="sub-container mt-3">
-                    <!-- <span class="close" data-bs-target="#myPopup">❌</span> -->
-                    <!-- <form class="form-control"> -->
                     <input class="form-control mt-2" placeholder="dd-mm-yyyy" type="date" required id="setDate">
                     <input class="form-control mt-2" type="time" required id="setTime">
-                    <textarea class="form-control mt-2" placeholder="Description" id="setDesc" rows="3"></textarea>
-                    <button class="open bg-success mt-2" onclick="setReminder()">Submit</button>
-                    <!-- </form> -->
+                    <textarea class="form-control mt-2" placeholder="Description" id="setDesc" rows="3" required></textarea>
+                    <button class="open bg-success mt-2" onclick="displayReminder()">Submit</button>
                 </div>
             </div>
 

@@ -45,7 +45,7 @@ const submitBtn = () => {
 
         let card = document.createElement('div')
         card.classList.add('card', 'bodybg', 'miniNote')
-        card.setAttribute('onclick', '')
+        card.setAttribute('onclick', '')``
         card.append(cardBody, noteFooter)
 
         miniNoteDisplay.appendChild(card)
