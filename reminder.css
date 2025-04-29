@@ -14,7 +14,7 @@
 .clock ul {
     list-style: none;
     display: flex;
-    font-size: 55px;
+    font-size: 3rem;
     gap: 12px;
     padding: 1rem 1rem 0 1rem;
     margin: 0;
@@ -94,7 +94,7 @@ ul .reminderList {
 }
 
 .popupbg {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     min-height: 100vh;
@@ -106,7 +106,8 @@ ul .reminderList {
 }
 
 .popup {
-    width: 40%;
+    padding: 1rem;
+    width: 60%;
     min-height: 50%;
     position: absolute;
     top: 25%;
@@ -114,4 +115,15 @@ ul .reminderList {
     border: 2px solid white;
     align-content: center;
     text-align: center;
+}
+
+
+@media(max-width:520px){
+    .clock ul {
+        font-size: 1.8rem;
+    } 
+
+    .popup{
+        width: 80%;
+    }
 }

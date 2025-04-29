@@ -19,6 +19,7 @@
 
 <body>
     <div class="sidebar" id="sidebar"></div>
+    <div id="navbar"></div>
     <div class="main-content">
         <div class="container">
             <div class="alert alert-danger" role="alert" id="balert" style="visibility: hidden;">
@@ -47,13 +48,14 @@
                 <div class="sub-container mt-3">
                     <input class="form-control mt-2" placeholder="dd-mm-yyyy" type="date" required id="setDate">
                     <input class="form-control mt-2" type="time" required id="setTime">
-                    <textarea class="form-control mt-2" placeholder="Description" id="setDesc" rows="3" required></textarea>
+                    <textarea class="form-control mt-2" placeholder="Description" id="setDesc" rows="3"
+                        required></textarea>
                     <button class="open bg-success mt-2" onclick="displayReminder()">Submit</button>
                 </div>
             </div>
 
             <ul id="listContainer">
-                
+
             </ul>
 
         </div>

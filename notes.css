@@ -22,7 +22,7 @@ textarea::placeholder{
 
 .miniNoteDisplay{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
     justify-content:space-between;
     gap: 1rem; 
 }
@@ -54,7 +54,7 @@ textarea::placeholder{
     white-space: pre-wrap;
     overflow-wrap: break-word;
     border-radius: 11px ;
-    padding: 10px;
+    padding: 0.5rem;
 }
 
 .card-body::-webkit-scrollbar{
@@ -78,7 +78,7 @@ textarea::placeholder{
 
 .popupbg{
     /* visibility: hidden; */
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     /* padding: 0; */
@@ -91,7 +91,7 @@ textarea::placeholder{
 }
 
 .popup{
-    width: 40%;
+    width: 60%;
     min-height: 50%;
     position: absolute;
     top: 25%;
@@ -99,4 +99,10 @@ textarea::placeholder{
     border: 2px solid white;
     align-content: center;
     text-align: center;
+}
+
+@media(max-width:520px){
+    .popup{
+        width: 80%;
+    }
 }

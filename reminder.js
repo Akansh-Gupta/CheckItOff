@@ -22,12 +22,6 @@ function clock() {
     document.getElementById('meridiem').innerHTML = meridiem
 } let inter = setInterval(clock, 1000)
 
-
-
-function myFunction() {
-    let popup = document.getElementById("myPopup");
-}
-
 let date = document.getElementById('setDate')
 let time = document.getElementById('setTime')
 let desc = document.getElementById('setDesc')
